@@ -18,14 +18,6 @@ useEffect(()=> {
 const loadUser = () =>{
     const userData = JSON.parse(localStorage.getItem("user"))
     setUser(userData)
-    setTimeout(()=> {
-        setUser(null)
-        if(!user){
-            navigate('/login')
-        }
-        
-        //imaginary logout
-    }, 5000)
 }
 
   return (
