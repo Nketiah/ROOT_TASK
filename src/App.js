@@ -8,8 +8,6 @@ import Register from './pages/Register'
 import Second from './pages/Second'
 
 
-// NOTE: Here we have removed the nested routing as the path is the same
-
 function App() {
   return (
     <>
@@ -20,7 +18,7 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
-            <Route path='/second' element={<Second />} />
+            <Route path='/second' element={<PrivateRoute> <Second/> </PrivateRoute>} />
           </Routes>
         </div>
       </Router>
